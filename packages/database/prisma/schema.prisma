@@ -868,3 +868,11 @@ model ClientPortalPermission {
 
   @@map("ClientPortalPermission")
 }
+
+model Widget {
+  id         String   @id @default(uuid())
+  type       String
+  code       String
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+}
